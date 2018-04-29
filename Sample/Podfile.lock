@@ -1,0 +1,23 @@
+PODS:
+  - AndroidDialog (1.0.0):
+    - JustLayout
+  - JustLayout (1.3.0)
+
+DEPENDENCIES:
+  - AndroidDialog (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - JustLayout
+
+EXTERNAL SOURCES:
+  AndroidDialog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AndroidDialog: 4f2eb3bb1112ca00422a461faff6dafe66adb75b
+  JustLayout: 1aac86536b005a4a683ab0a853c98c31f1c23526
+
+PODFILE CHECKSUM: f79beb8fc15a99dfeb3b196bb250c0a66b1e0350
+
+COCOAPODS: 1.5.0
