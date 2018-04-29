@@ -25,7 +25,9 @@ v1.0, 2018-04-29
 
 == 🏵 Introduction
 
-**AndroidDialog** is an Android Dialog framework for iOS..
+**AndroidDialog** is an Android Dialog framework for iOS.
+
+image:https://i.loli.net/2018/04/30/5ae5fc10ebb1f.png[Preview]
 
 == 📋 Requirements
 
@@ -54,5 +56,11 @@ You are welcome to fork and submit pull requests.
 
 [source, swift]
 ----
-
+let dialog = AndroidDialog.init()
+dialog.setTitle("Alert")
+dialog.setMessage("This is a message!!!\nhahahahahahahahahahahahha!😆\nO(∩_∩)O~")
+dialog.setPositiveButton("Done") { (d) in
+  d.hide()
+}
+dialog.show(to: self.view)
 ----
