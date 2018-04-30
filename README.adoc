@@ -23,6 +23,8 @@ v1.0, 2018-04-30
 </p>
 ++++
 
+:toc:
+
 == 🏵 Introduction
 
 **AndroidDialog** is an Android Dialog framework for iOS.
