@@ -37,11 +37,11 @@ toc::[]
 
 `{name}` is available on link:https://cocoapods.org[CocoaPods].
 
-====
+****
 use_frameworks!
 
 pod '{name}'
-====
+****
 
 == ❤️ Contribution
 
