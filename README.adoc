@@ -43,6 +43,12 @@ use_frameworks!
 pod '{name}'
 ****
 
+""
+use_frameworks!
+
+pod '{name}'
+""
+
 == ❤️ Contribution
 
 You are welcome to fork and submit pull requests.
