@@ -7,7 +7,7 @@ v1.0, 2018-04-29
 <p align="center">
   <!-- <img src="./Assets/AndroidDialog.png" alt="AndroidDialog"> -->
   <br/><a href="https://cocoapods.org/pods/re">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-brightgreen.svg">
   <img alt="Author" src="https://img.shields.io/badge/author-Meniny-blue.svg">
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-4.1%2B-orange.svg">
@@ -56,11 +56,14 @@ You are welcome to fork and submit pull requests.
 
 [source, swift]
 ----
+import AndroidDialog
+
 let dialog = AndroidDialog.init()
 dialog.setTitle("Alert")
-dialog.setMessage("This is a message!!!\nhahahahahahahahahahahahha!😆\nO(∩_∩)O~")
+dialog.setMessage("This is a message!!! O(∩_∩)O~")
 dialog.setPositiveButton("Done") { (d) in
   d.hide()
 }
+dialog.coverType = .blurred(.dark)
 dialog.show(to: self.view)
 ----

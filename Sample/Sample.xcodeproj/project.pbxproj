@@ -16,6 +16,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C923A532096DE9300E8F049 /* README.adoc */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.adoc; path = ../README.adoc; sourceTree = "<group>"; };
+		5C923A542096DE9300E8F049 /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = _config.yml; path = ../_config.yml; sourceTree = "<group>"; };
+		5C923A552096DE9300E8F049 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		5C923A562096DE9300E8F049 /* AndroidDialog.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AndroidDialog.podspec; path = ../AndroidDialog.podspec; sourceTree = "<group>"; };
+		5C923A572096DE9400E8F049 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		5CEACBF42095F9B2002C6FC7 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEACBF72095F9B2002C6FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CEACBF92095F9B2002C6FC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +57,11 @@
 		5CEACBEB2095F9B2002C6FC7 = {
 			isa = PBXGroup;
 			children = (
+				5C923A542096DE9300E8F049 /* _config.yml */,
+				5C923A552096DE9300E8F049 /* .gitignore */,
+				5C923A562096DE9300E8F049 /* AndroidDialog.podspec */,
+				5C923A572096DE9400E8F049 /* LICENSE.md */,
+				5C923A532096DE9300E8F049 /* README.adoc */,
 				5CEACBF62095F9B2002C6FC7 /* Sample */,
 				5CEACBF52095F9B2002C6FC7 /* Products */,
 				04AE3D8C28E56932F6ECAEC3 /* Pods */,
@@ -351,7 +361,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63YL5QDMNS;
 				INFOPLIST_FILE = Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.meniny.AndroidDialog.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -367,7 +380,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63YL5QDMNS;
 				INFOPLIST_FILE = Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.meniny.AndroidDialog.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

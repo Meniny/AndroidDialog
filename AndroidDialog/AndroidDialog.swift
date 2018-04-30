@@ -9,7 +9,6 @@ fileprivate struct PrivateValues {
 }
 
 public class AndroidDialog: UIView {
-    public private(set) var coverView: UIView                     = UIView.init()
     public private(set) var dialogView: AndroidDialog.ContextView = AndroidDialog.ContextView.init()
     
     public var title: String = "Alert"
@@ -74,36 +73,70 @@ public class AndroidDialog: UIView {
         }
     }
     
+    public enum CoverType: Equatable {
+        case blurred(UIBlurEffectStyle)
+        case translucent(UIColor, CGFloat)
+        case none
+        
+        fileprivate var view: UIView {
+            switch self {
+            case .translucent(let color, let alpha):
+                let v = UIView.init()
+                v.backgroundColor = color
+                v.alpha = alpha
+                return v
+            case .blurred(let style):
+                let effect = UIBlurEffect.init(style: style)
+                let ev = UIVisualEffectView.init(effect: effect)
+                return ev
+            default:
+                let v = UIView.init()
+                return v
+            }
+        }
+    }
+    
+    public var coverType: AndroidDialog.CoverType = .translucent(UIColor.black, 0.3)
+    
     public private(set) var queueType: AndroidDialog.QueueType = .default
     
+    private func removeAll() {
+        for v in self.subviews {
+            v.removeFromSuperview()
+        }
+        self.removeAllConstraints()
+    }
+    
     private func layout(to container: UIView?) {
+        self.alpha = 0
+        
+        self.removeAll()
+        
+        let coverView = self.coverType.view
         container?.translates(subViews: self)
         self.top(0).bottom(0).left(0).right(0)
         
-        self.translates(subViews: self.coverView, self.dialogView)
-        self.coverView.top(0).bottom(0).left(0).right(0)
+        self.translates(subViews: coverView, self.dialogView)
+        coverView.top(0).bottom(0).left(0).right(0)
         self.dialogView.centerInContainer()
         self.dialogView.width(240).height(>=0)
-        
-        self.dialogView.positiveButton.addTarget(self, action: #selector(positiveTapped(_:)), for: .touchUpInside)
-        self.dialogView.negativeButton.addTarget(self, action: #selector(negativeTapped(_:)), for: .touchUpInside)
-        
-        self.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
         
         self.dialogView.titleLabel.text = self.title
         self.dialogView.messageLabel.text = self.message
         self.dialogView.positiveButton.setTitle(self.positive, for: UIControlState.normal)
         self.dialogView.negativeButton.isHidden = self.negative == nil
         self.dialogView.negativeButton.setTitle(self.negative, for: UIControlState.normal)
+        
+        self.dialogView.applyShadow(color: nil)
     }
     
     @discardableResult
     public func show(to view: UIView?, animated: Bool = true, queue: AndroidDialog.QueueType = .default) -> Self {
-        self.layout(to: view ?? UIApplication.shared.keyWindow)
         self.queueType = queue
         self.queueType.queue.async {
             self.queueType.semaphore?.wait()
             DispatchQueue.main.async {
+                self.layout(to: view ?? UIApplication.shared.keyWindow)
                 self._show(animated: animated)
             }
         }
@@ -125,10 +158,6 @@ public class AndroidDialog: UIView {
     }
     
     public func hide(animated: Bool = true) {
-        self._hide(animated: animated)
-    }
-    
-    private func _hide(animated: Bool) {
         if animated {
             self.alpha = 1
             self.dialogView.transform = CGAffineTransform.init(scaleX: 1, y: 1)
@@ -145,7 +174,13 @@ public class AndroidDialog: UIView {
         }
     }
     
+    private func brith() {
+        self.dialogView.positiveButton.addTarget(self, action: #selector(positiveTapped(_:)), for: .touchUpInside)
+        self.dialogView.negativeButton.addTarget(self, action: #selector(negativeTapped(_:)), for: .touchUpInside)
+    }
+    
     private func dead() {
+        self.removeAll()
         self.removeFromSuperview()
         self.queueType.semaphore?.signal()
     }
@@ -170,10 +205,12 @@ public class AndroidDialog: UIView {
     
     public init() {
         super.init(frame: .zero)
+        self.brith()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.brith()
     }
     
     deinit {
@@ -198,7 +235,15 @@ public extension AndroidDialog {
             self.layout()
         }
         
-        public func styleSubviews() {
+        fileprivate func applyShadow(color: UIColor?) {
+            self.clipsToBounds = false
+            self.layer.shadowColor = (color ?? UIColor.init(white: 0, alpha: 0.3)).cgColor
+            self.layer.shadowRadius = 10
+            self.layer.shadowOpacity = 0.3
+            self.layer.shadowOffset = CGSize.zero
+        }
+        
+        fileprivate func styleSubviews() {
             self.backgroundColor = UIColor.white
             
             [self.titleLabel, self.messageLabel].style { (label) in
