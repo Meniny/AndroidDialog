@@ -1,21 +1,33 @@
 :name: AndroidDialog
+:author: Elias Abel
+:mail: admin@meniny.cn
 :desc: an Android Dialog framework for iOS
+:version: 1.0.2
 :na: N/A
+:ios: 8.0
+:macos: {na}
+:watchos: {na}
+:tvos: {na}
+:linux: {na}
+:xcode: 9.3
+:swift: 4.1
+:license: MIT
 = Meet `{name}`
-Elias Abel <admin@meniny.cn>
-v1.0, 2018-04-30
+{author} <{mail}>
+v{version}, 2018-04-30
 
+[subs="attributes"]
 ++++
 <p align="center">
   <img src="./Assets/Banner.jpg" alt="Banner">
   <br/><br/>
   <img alt="Author" src="https://img.shields.io/badge/author-Elias%20Abel-blue.svg">
   <img alt="EMail" src="https://img.shields.io/badge/mail-admin@meniny.cn-orange.svg">
-  <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="MIT" src="https://img.shields.io/badge/license-{license}-blue.svg">
   <br/>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.2-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-{version}-brightgreen.svg">
   <img alt="Platforms" src="https://img.shields.io/badge/platform-iOS-lightgrey.svg">
-  <img alt="Swift" src="https://img.shields.io/badge/swift-4.1%2B-orange.svg">
+  <img alt="Swift" src="https://img.shields.io/badge/swift-{swift}%2B-orange.svg">
   <br/>
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Cocoapods" src="https://img.shields.io/badge/cocoapods-compatible-brightgreen.svg">
@@ -36,14 +48,14 @@ v1.0, 2018-04-30
 |===
 2+^m|Type 1+^m|Requirement
 
-1.5+^.^|Platform ^|iOS ^|8.0+
-^|macOS ^e|{na}
-^|tvOS ^e|{na}
-^|watchOS ^e|{na}
-^|Linux ^e|{na}
+1.5+^.^|Platform ^|iOS ^|{ios}+
+^|macOS ^e|{macos}
+^|tvOS ^e|{tvos}
+^|watchOS ^e|{watchos}
+^|Linux ^e|{linux}
 
-^|IDE ^|Xcode ^| 9.3+
-^|Language ^|Swift ^| 4.1+
+^|IDE ^|Xcode ^| {xcode}+
+^|Language ^|Swift ^| {swift}+
 |===
 
 == 📲 Installation
@@ -52,10 +64,10 @@ v1.0, 2018-04-30
 
 `{name}` is available on link:https://cocoapods.org[CocoaPods].
 
-[source, ruby]
+[source, ruby, subs="verbatim,attributes"]
 ----
 use_frameworks!
-pod 'AndroidDialog'
+pod '{name}'
 ----
 
 === Manually
@@ -64,7 +76,7 @@ Copy all files in the `{name}` directory into your project.
 
 == 🛌 Dependency
 
-* link:https://github.com/Meniny/JustLayout[JustLayout]
+* link:https://github.com/Meniny/JustLayout[`JustLayout`]
 
 == ❤️ Contribution
 
@@ -72,7 +84,7 @@ You are welcome to fork and submit pull requests.
 
 == 🔖 License
 
-`{name}` is open-sourced software, licensed under the link:./LICENSE.md[`MIT`] license.
+`{name}` is open-sourced software, licensed under the link:./LICENSE.md[`{license}`] license.
 
 == 🔫 Usage
 
