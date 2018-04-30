@@ -27,8 +27,6 @@ v1.0, 2018-04-30
 
 **AndroidDialog** is an Android Dialog framework for iOS.
 
-image:https://i.loli.net/2018/04/30/5ae5fc10ebb1f.png[Preview]
-
 == 📋 Requirements
 
 - iOS 8.0+
