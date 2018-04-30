@@ -1,9 +1,9 @@
-= Meet `AndroidDialog`
-Elias Abel <admin@meniny.cn>
-v1.0, 2018-04-30
 :name: AndroidDialog
 :desc: an Android Dialog framework for iOS
 :na: N/A
+= Meet `{name}`
+Elias Abel <admin@meniny.cn>
+v1.0, 2018-04-30
 
 ++++
 <p align="center">
