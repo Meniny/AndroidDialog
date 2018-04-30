@@ -2,6 +2,8 @@
 Elias Abel <admin@meniny.cn>
 v1.0, 2018-04-30
 :name: AndroidDialog
+:desc: an Android Dialog framework for iOS
+:na: N/A
 
 ++++
 <p align="center">
@@ -26,7 +28,7 @@ v1.0, 2018-04-30
 
 == 🏵 Introduction
 
-**{name}** is an Android Dialog framework for iOS.
+**{name}** is {desc}.
 
 == 📋 Requirements
 
@@ -35,10 +37,10 @@ v1.0, 2018-04-30
 2+^m|Type 1+^m|Requirement
 
 1.5+^.^|Platform ^|iOS ^|8.0+
-^|macOS ^e|N/A
-^|tvOS ^e|N/A
-^|watchOS ^e|N/A
-^|Linux ^e|N/A
+^|macOS ^e|{na}
+^|tvOS ^e|{na}
+^|watchOS ^e|{na}
+^|Linux ^e|{na}
 
 ^|IDE ^|Xcode ^| 9.3+
 ^|Language ^|Swift ^| 4.1+
