@@ -30,8 +30,19 @@ v1.0, 2018-04-30
 
 == 📋 Requirements
 
-- iOS 8.0+
-- Xcode 9.0+ with Swift 4.1+
+[%header]
+|===
+2+^m|Type 1+^m|Requirement
+
+1.5+^.^|Platform ^|iOS ^|8.0+
+^|macOS ^e|N/A
+^|tvOS ^e|N/A
+^|watchOS ^e|N/A
+^|Linux ^e|N/A
+
+^|IDE ^|Xcode ^| 9.3+
+^|Language ^|Swift ^| 4.1+
+|===
 
 == 📲 Installation
 
