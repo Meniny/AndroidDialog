@@ -1,6 +1,6 @@
 = Meet `AndroidDialog`
-Doc Writer <doc.writer@asciidoctor.org>
-v1.0, 2018-04-29
+Elias Abel <admin@meniny.cn>
+v1.0, 2018-04-30
 :toc:
 
 ++++
