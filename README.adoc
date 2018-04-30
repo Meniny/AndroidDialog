@@ -1,20 +1,19 @@
 = Meet `AndroidDialog`
 Elias Abel <admin@meniny.cn>
 v1.0, 2018-04-30
-:toc:
+:name: AndroidDialog
 
 ++++
 <p align="center">
-  <img src="./Assets/AndroidDialog.jpg" alt="AndroidDialog">
+  <img src="./Assets/Banner.jpg" alt="Banner">
   <br/><br/>
-  <img alt="Project" src="https://img.shields.io/badge/project-Android%20Dialog-brightgreen.svg">
   <img alt="Author" src="https://img.shields.io/badge/author-Elias%20Abel-blue.svg">
   <img alt="EMail" src="https://img.shields.io/badge/mail-admin@meniny.cn-orange.svg">
+  <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <br/>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-brightgreen.svg">
   <img alt="Platforms" src="https://img.shields.io/badge/platform-iOS-lightgrey.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-4.1%2B-orange.svg">
-  <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <br/>
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Cocoapods" src="https://img.shields.io/badge/cocoapods-compatible-brightgreen.svg">
@@ -23,11 +22,11 @@ v1.0, 2018-04-30
 </p>
 ++++
 
-:toc:
+toc::[]
 
 == 🏵 Introduction
 
-**AndroidDialog** is an Android Dialog framework for iOS.
+**{name}** is an Android Dialog framework for iOS.
 
 == 📋 Requirements
 
@@ -36,13 +35,13 @@ v1.0, 2018-04-30
 
 == 📲 Installation
 
-`AndroidDialog` is available on link:https://cocoapods.org[CocoaPods].
+`{name}` is available on link:https://cocoapods.org[CocoaPods].
 
-[source, ruby]
-----
+====
 use_frameworks!
-pod 'AndroidDialog'
-----
+
+pod '{name}'
+====
 
 == ❤️ Contribution
 
@@ -50,7 +49,7 @@ You are welcome to fork and submit pull requests.
 
 == 🔖 License
 
-`AndroidDialog` is open-sourced software, licensed under the `MIT` license.
+`{name}` is open-sourced software, licensed under the link:./LICENSE.md[`MIT`] license.
 
 == 🔫 Usage
 
