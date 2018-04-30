@@ -11,7 +11,7 @@ v1.0, 2018-04-30
   <img alt="EMail" src="https://img.shields.io/badge/mail-admin@meniny.cn-orange.svg">
   <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <br/>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.2-brightgreen.svg">
   <img alt="Platforms" src="https://img.shields.io/badge/platform-iOS-lightgrey.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-4.1%2B-orange.svg">
   <br/>
@@ -22,7 +22,7 @@ v1.0, 2018-04-30
 </p>
 ++++
 
-toc::[]
+:toc:
 
 == 🏵 Introduction
 
@@ -35,19 +35,23 @@ toc::[]
 
 == 📲 Installation
 
+=== CocoaPods
+
 `{name}` is available on link:https://cocoapods.org[CocoaPods].
 
-****
+[source, ruby]
+----
 use_frameworks!
+pod 'AndroidDialog'
+----
 
-pod '{name}'
-****
+=== Manually
 
-""
-use_frameworks!
+Copy all files in the `{name}` directory into your project.
 
-pod '{name}'
-""
+== 🛌 Dependency
+
+* link:https://github.com/Meniny/JustLayout[JustLayout]
 
 == ❤️ Contribution
 
@@ -62,7 +66,10 @@ You are welcome to fork and submit pull requests.
 [source, swift]
 ----
 import AndroidDialog
+----
 
+[source, swift]
+----
 let dialog = AndroidDialog.init()
 dialog.setTitle("Alert")
 dialog.setMessage("This is a message!!! O(∩_∩)O~")
